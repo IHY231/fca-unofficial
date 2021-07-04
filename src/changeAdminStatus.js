@@ -6,11 +6,8 @@ const log = require("npmlog");
 module.exports = function (defaultFuncs, api, ctx) {
   return function changeAdminStatus(threadID, adminIDs, adminStatus, callback) {
     if (utils.getType(threadID) !== "String") throw { error: "changeAdminStatus: threadID must be a string" };
-
     if (utils.getType(adminIDs) === "String") adminIDs = [adminIDs];
-
     if (utils.getType(adminIDs) !== "Array") throw { error: "changeAdminStatus: adminIDs must be an array or string" };
-
     if (utils.getType(adminStatus) !== "Boolean") throw { error: "changeAdminStatus: adminStatus must be a string" };
 
     var resolveFunc = function () { };

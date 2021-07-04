@@ -505,8 +505,9 @@ function login(loginData, options, callback) {
   }
 
   var globalOptions = {
+    pauseLog: true,
     selfListen: false,
-    listenEvents: false,
+    listenEvents: true,
     listenTyping: false,
     updatePresence: false,
     forceLogin: false,
